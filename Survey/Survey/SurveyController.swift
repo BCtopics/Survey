@@ -18,12 +18,12 @@ class SurveyController {
     
     static func fetchResponses(completion: @escaping (_ responses: [Survey]) -> Void) {
         var surveys: [Survey] = []
-        defer { completion(surveys) }
         
         guard let url = baseURL?.appendingPathExtension("json") else {
             fatalError("URL is nil") }
         
         NetworkController.performRequest(for: url, httpMethod: .get) { (data, error) in
+            defer { completion(surveys) }
             guard let data = data else { return }
             let responseDataString = String(data: data, encoding: .utf8) ?? ""
             
@@ -37,7 +37,31 @@ class SurveyController {
         
     }
     
-    
     //MARK: - Post Method
+    
+    static func putSurvey(name: String, language: String){
+        let survey = Survey(name: name, language: language)
+        
+        guard let url = baseURL?.appendingPathComponent(survey.identifier.uuidString).appendingPathExtension("json")
+            else { return }
+        
+        NetworkController.performRequest(for: url, httpMethod: .put, body: survey.jsonData) { (data, error) in
+            guard let data = data else { return }
+            let responseDataString = String(data: data, encoding: .utf8) ?? ""
+            
+            if error != nil {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            } else if responseDataString.contains("error") {
+                print("Error: \(responseDataString)")
+            } else {
+                print("Success \(responseDataString)")
+            }
+            
+        }
+        
+        
+    }
+    
+    
     
 }
