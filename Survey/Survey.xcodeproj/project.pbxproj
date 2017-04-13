@@ -13,6 +13,7 @@
 		6B1A17131E9FDECE00699268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A17111E9FDECE00699268 /* LaunchScreen.storyboard */; };
 		6B1A171E1E9FE1FC00699268 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A171D1E9FE1FC00699268 /* Survey.swift */; };
 		6B1A17221E9FE6EF00699268 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A17211E9FE6EF00699268 /* NetworkController.swift */; };
+		6B1A17241E9FE74400699268 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A17231E9FE74400699268 /* SurveyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6B1A17141E9FDECE00699268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B1A171D1E9FE1FC00699268 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		6B1A17211E9FE6EF00699268 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		6B1A17231E9FE74400699268 /* SurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,9 @@
 		6B1A17071E9FDECE00699268 /* Survey */ = {
 			isa = PBXGroup;
 			children = (
+				6B1A17081E9FDECE00699268 /* AppDelegate.swift */,
 				6B1A17201E9FE6E200699268 /* Networking */,
 				6B1A171F1E9FE6D900699268 /* ModelControllers */,
-				6B1A17081E9FDECE00699268 /* AppDelegate.swift */,
 				6B1A171C1E9FE1EA00699268 /* Models */,
 				6B1A171B1E9FDEF000699268 /* ViewControllers */,
 				6B1A171A1E9FDEE800699268 /* Resources */,
@@ -95,6 +97,7 @@
 		6B1A171F1E9FE6D900699268 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6B1A17231E9FE74400699268 /* SurveyController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				6B1A17091E9FDECE00699268 /* AppDelegate.swift in Sources */,
 				6B1A171E1E9FE1FC00699268 /* Survey.swift in Sources */,
 				6B1A17221E9FE6EF00699268 /* NetworkController.swift in Sources */,
+				6B1A17241E9FE74400699268 /* SurveyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
